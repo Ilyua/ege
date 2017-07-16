@@ -27,11 +27,13 @@ class Teacher(models.Model):
 class Lesson(models.Model):
     theory = models.OneToOneField(
         Article,
-        on_delete=models.CASCADE)
+        on_delete=models.CASCADE,
+        related_name='theory_article')
     #models.TextField(max_length=200)
-    test = theory = models.OneToOneField(
+    test = models.OneToOneField(
         Article,
-        on_delete=models.CASCADE)
+        on_delete=models.CASCADE,
+        related_name='test_article')
     tip = models.TextField(max_length=200)
     number = models.CharField(max_length=200)
     result_type = models.CharField(max_length=200)

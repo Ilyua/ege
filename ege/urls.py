@@ -24,7 +24,3 @@ urlpatterns = [
 
 ]
 
-urlpatterns += [
-    url(r'^notifications/', get_nyt_pattern()),
-    url(r'', get_wiki_pattern())
-]
