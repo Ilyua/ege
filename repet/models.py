@@ -35,7 +35,7 @@ class Lesson(models.Model):
     tip = models.TextField(max_length=200)
     number = models.CharField(max_length=200)
     result_type = models.CharField(max_length=200)
-    answers = models.CharField(max_length=200)
+    answer = models.CharField(max_length=200)
     true_answer = models.CharField(max_length=200)
     #TODO
     def __str__(self):
