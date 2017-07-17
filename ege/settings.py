@@ -38,18 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
-    'django.contrib.humanize',
-    'django_nyt',
-    'mptt',
-    'sekizai',
-    'sorl.thumbnail',
-    'wiki',
-    'wiki.plugins.attachments',
-    'wiki.plugins.notifications',
-    'wiki.plugins.images',
-    'wiki.plugins.macros',
+    #'django.contrib.markup',
+    'markitup'
+
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -128,7 +121,10 @@ USE_L10N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+#JQUERY_URL = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'
+STATIC_URL = '/static/markitup/'
+MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': True})
